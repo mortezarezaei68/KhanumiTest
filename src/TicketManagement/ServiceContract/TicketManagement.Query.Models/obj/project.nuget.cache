@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "qtJZWWxWTGmu+N9hFdAQr/vmMgplLIKiUKZAMmrERQ5FrsC3ffS1dSuffIvB2KRFoCs8QDQMLXVjMPxjefUqVg==",
+  "success": true,
+  "projectFilePath": "/media/morteza/6b53ded8-ff21-4348-afd5-962880213bc4/FilmnetProject/src/TicketManagement/ServiceContract/TicketManagement.Query.Models/TicketManagement.Query.Models.csproj",
+  "expectedPackageFiles": [
+    "/home/morteza/.nuget/packages/mediatr/9.0.0/mediatr.9.0.0.nupkg.sha512",
+    "/home/morteza/.nuget/packages/microsoft.extensions.logging.abstractions/5.0.0/microsoft.extensions.logging.abstractions.5.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

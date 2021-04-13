@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace TicketManagement.Persistance.EF
+namespace TicketManagement.Configurations
 {
     public class Class1
     {
