@@ -1,0 +1,17 @@
+/media/morteza/6b53ded8-ff21-4348-afd5-962880213bc4/FilmnetProject/src/TicketManagement/ServiceContract/TicketManagement.Query.Models/bin/Debug/net5.0/TicketManagement.Query.Models.deps.json
+/media/morteza/6b53ded8-ff21-4348-afd5-962880213bc4/FilmnetProject/src/TicketManagement/ServiceContract/TicketManagement.Query.Models/bin/Debug/net5.0/TicketManagement.Query.Models.dll
+/media/morteza/6b53ded8-ff21-4348-afd5-962880213bc4/FilmnetProject/src/TicketManagement/ServiceContract/TicketManagement.Query.Models/bin/Debug/net5.0/ref/TicketManagement.Query.Models.dll
+/media/morteza/6b53ded8-ff21-4348-afd5-962880213bc4/FilmnetProject/src/TicketManagement/ServiceContract/TicketManagement.Query.Models/bin/Debug/net5.0/TicketManagement.Query.Models.pdb
+/media/morteza/6b53ded8-ff21-4348-afd5-962880213bc4/FilmnetProject/src/TicketManagement/ServiceContract/TicketManagement.Query.Models/bin/Debug/net5.0/Framework.Exception.dll
+/media/morteza/6b53ded8-ff21-4348-afd5-962880213bc4/FilmnetProject/src/TicketManagement/ServiceContract/TicketManagement.Query.Models/bin/Debug/net5.0/Framework.Queries.dll
+/media/morteza/6b53ded8-ff21-4348-afd5-962880213bc4/FilmnetProject/src/TicketManagement/ServiceContract/TicketManagement.Query.Models/bin/Debug/net5.0/Framework.Queries.pdb
+/media/morteza/6b53ded8-ff21-4348-afd5-962880213bc4/FilmnetProject/src/TicketManagement/ServiceContract/TicketManagement.Query.Models/bin/Debug/net5.0/Framework.Exception.pdb
+/media/morteza/6b53ded8-ff21-4348-afd5-962880213bc4/FilmnetProject/src/TicketManagement/ServiceContract/TicketManagement.Query.Models/obj/Debug/net5.0/TicketManagement.Query.Models.csprojAssemblyReference.cache
+/media/morteza/6b53ded8-ff21-4348-afd5-962880213bc4/FilmnetProject/src/TicketManagement/ServiceContract/TicketManagement.Query.Models/obj/Debug/net5.0/TicketManagement.Query.Models.GeneratedMSBuildEditorConfig.editorconfig
+/media/morteza/6b53ded8-ff21-4348-afd5-962880213bc4/FilmnetProject/src/TicketManagement/ServiceContract/TicketManagement.Query.Models/obj/Debug/net5.0/TicketManagement.Query.Models.AssemblyInfoInputs.cache
+/media/morteza/6b53ded8-ff21-4348-afd5-962880213bc4/FilmnetProject/src/TicketManagement/ServiceContract/TicketManagement.Query.Models/obj/Debug/net5.0/TicketManagement.Query.Models.AssemblyInfo.cs
+/media/morteza/6b53ded8-ff21-4348-afd5-962880213bc4/FilmnetProject/src/TicketManagement/ServiceContract/TicketManagement.Query.Models/obj/Debug/net5.0/TicketManagement.Query.Models.csproj.CoreCompileInputs.cache
+/media/morteza/6b53ded8-ff21-4348-afd5-962880213bc4/FilmnetProject/src/TicketManagement/ServiceContract/TicketManagement.Query.Models/obj/Debug/net5.0/TicketManagement.Query.Models.csproj.CopyComplete
+/media/morteza/6b53ded8-ff21-4348-afd5-962880213bc4/FilmnetProject/src/TicketManagement/ServiceContract/TicketManagement.Query.Models/obj/Debug/net5.0/TicketManagement.Query.Models.dll
+/media/morteza/6b53ded8-ff21-4348-afd5-962880213bc4/FilmnetProject/src/TicketManagement/ServiceContract/TicketManagement.Query.Models/obj/Debug/net5.0/ref/TicketManagement.Query.Models.dll
+/media/morteza/6b53ded8-ff21-4348-afd5-962880213bc4/FilmnetProject/src/TicketManagement/ServiceContract/TicketManagement.Query.Models/obj/Debug/net5.0/TicketManagement.Query.Models.pdb

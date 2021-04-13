@@ -77,6 +77,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TicketManagement.Queries", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TicketManagement.Query.Models", "src\TicketManagement\ServiceContract\TicketManagement.Query.Models\TicketManagement.Query.Models.csproj", "{34AA998C-C338-4AFE-8F8A-5DF5543501D0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TicketManagement.Service", "src\TicketManagement\Presentation\TicketManagement.Service\TicketManagement.Service.csproj", "{1BCE6C95-B4C8-417D-BC97-86A5D7FC6A87}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -126,6 +128,7 @@ Global
 		{05ACE34D-57DE-4DDA-B3C6-B264FB504C7D} = {0CFB5088-B62B-42D2-864A-FB07B712790A}
 		{18917DB4-F3D1-461E-BB53-EC02A6F86F92} = {0CFB5088-B62B-42D2-864A-FB07B712790A}
 		{34AA998C-C338-4AFE-8F8A-5DF5543501D0} = {0CFB5088-B62B-42D2-864A-FB07B712790A}
+		{1BCE6C95-B4C8-417D-BC97-86A5D7FC6A87} = {6BFB8B74-8090-4A5C-9021-CA95980DDD1E}
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{376E9074-7D6E-40EC-A12F-5BD49A88D636}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -428,5 +431,17 @@ Global
 		{34AA998C-C338-4AFE-8F8A-5DF5543501D0}.Release|x64.Build.0 = Release|Any CPU
 		{34AA998C-C338-4AFE-8F8A-5DF5543501D0}.Release|x86.ActiveCfg = Release|Any CPU
 		{34AA998C-C338-4AFE-8F8A-5DF5543501D0}.Release|x86.Build.0 = Release|Any CPU
+		{1BCE6C95-B4C8-417D-BC97-86A5D7FC6A87}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1BCE6C95-B4C8-417D-BC97-86A5D7FC6A87}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1BCE6C95-B4C8-417D-BC97-86A5D7FC6A87}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{1BCE6C95-B4C8-417D-BC97-86A5D7FC6A87}.Debug|x64.Build.0 = Debug|Any CPU
+		{1BCE6C95-B4C8-417D-BC97-86A5D7FC6A87}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{1BCE6C95-B4C8-417D-BC97-86A5D7FC6A87}.Debug|x86.Build.0 = Debug|Any CPU
+		{1BCE6C95-B4C8-417D-BC97-86A5D7FC6A87}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1BCE6C95-B4C8-417D-BC97-86A5D7FC6A87}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1BCE6C95-B4C8-417D-BC97-86A5D7FC6A87}.Release|x64.ActiveCfg = Release|Any CPU
+		{1BCE6C95-B4C8-417D-BC97-86A5D7FC6A87}.Release|x64.Build.0 = Release|Any CPU
+		{1BCE6C95-B4C8-417D-BC97-86A5D7FC6A87}.Release|x86.ActiveCfg = Release|Any CPU
+		{1BCE6C95-B4C8-417D-BC97-86A5D7FC6A87}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

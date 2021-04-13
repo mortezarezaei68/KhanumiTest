@@ -47,9 +47,6 @@
 /media/morteza/6b53ded8-ff21-4348-afd5-962880213bc4/HalfMile/src/UserManagement/infrastructures/UserManagement.Configurations/bin/Debug/net5.0/CarService.Domains.pdb
 /media/morteza/6b53ded8-ff21-4348-afd5-962880213bc4/HalfMile/src/UserManagement/infrastructures/UserManagement.Configurations/bin/Debug/net5.0/CarService.Persistence.EF.pdb
 /media/morteza/6b53ded8-ff21-4348-afd5-962880213bc4/HalfMile/src/UserManagement/infrastructures/UserManagement.Configurations/bin/Debug/net5.0/CarService.Query.Model.pdb
-/media/morteza/6b53ded8-ff21-4348-afd5-962880213bc4/FilmnetProject/src/UserManagement/infrastructures/UserManagement.Configurations/obj/Debug/net5.0/UserManagement.Configurations.dll
-/media/morteza/6b53ded8-ff21-4348-afd5-962880213bc4/FilmnetProject/src/UserManagement/infrastructures/UserManagement.Configurations/obj/Debug/net5.0/ref/UserManagement.Configurations.dll
-/media/morteza/6b53ded8-ff21-4348-afd5-962880213bc4/FilmnetProject/src/UserManagement/infrastructures/UserManagement.Configurations/obj/Debug/net5.0/UserManagement.Configurations.pdb
 /media/morteza/6b53ded8-ff21-4348-afd5-962880213bc4/FilmnetProject/src/UserManagement/infrastructures/UserManagement.Configurations/bin/Debug/net5.0/UserManagement.Configurations.deps.json
 /media/morteza/6b53ded8-ff21-4348-afd5-962880213bc4/FilmnetProject/src/UserManagement/infrastructures/UserManagement.Configurations/bin/Debug/net5.0/UserManagement.Configurations.dll
 /media/morteza/6b53ded8-ff21-4348-afd5-962880213bc4/FilmnetProject/src/UserManagement/infrastructures/UserManagement.Configurations/bin/Debug/net5.0/ref/UserManagement.Configurations.dll
@@ -88,3 +85,6 @@
 /media/morteza/6b53ded8-ff21-4348-afd5-962880213bc4/FilmnetProject/src/UserManagement/infrastructures/UserManagement.Configurations/obj/Debug/net5.0/UserManagement.Configurations.AssemblyInfo.cs
 /media/morteza/6b53ded8-ff21-4348-afd5-962880213bc4/FilmnetProject/src/UserManagement/infrastructures/UserManagement.Configurations/obj/Debug/net5.0/UserManagement.Configurations.csproj.CoreCompileInputs.cache
 /media/morteza/6b53ded8-ff21-4348-afd5-962880213bc4/FilmnetProject/src/UserManagement/infrastructures/UserManagement.Configurations/obj/Debug/net5.0/UserManagement.Configurations.csproj.CopyComplete
+/media/morteza/6b53ded8-ff21-4348-afd5-962880213bc4/FilmnetProject/src/UserManagement/infrastructures/UserManagement.Configurations/obj/Debug/net5.0/UserManagement.Configurations.dll
+/media/morteza/6b53ded8-ff21-4348-afd5-962880213bc4/FilmnetProject/src/UserManagement/infrastructures/UserManagement.Configurations/obj/Debug/net5.0/ref/UserManagement.Configurations.dll
+/media/morteza/6b53ded8-ff21-4348-afd5-962880213bc4/FilmnetProject/src/UserManagement/infrastructures/UserManagement.Configurations/obj/Debug/net5.0/UserManagement.Configurations.pdb

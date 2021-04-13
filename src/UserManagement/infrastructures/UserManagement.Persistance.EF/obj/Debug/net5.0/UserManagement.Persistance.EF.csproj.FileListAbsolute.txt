@@ -36,6 +36,7 @@
 /media/morteza/6b53ded8-ff21-4348-afd5-962880213bc4/FilmnetProject/src/UserManagement/infrastructures/UserManagement.Persistance.EF/bin/Debug/net5.0/UserManagement.Persistance.EF.pdb
 /media/morteza/6b53ded8-ff21-4348-afd5-962880213bc4/FilmnetProject/src/UserManagement/infrastructures/UserManagement.Persistance.EF/bin/Debug/net5.0/Framework.Buses.dll
 /media/morteza/6b53ded8-ff21-4348-afd5-962880213bc4/FilmnetProject/src/UserManagement/infrastructures/UserManagement.Persistance.EF/bin/Debug/net5.0/Framework.Commands.dll
+/media/morteza/6b53ded8-ff21-4348-afd5-962880213bc4/FilmnetProject/src/UserManagement/infrastructures/UserManagement.Persistance.EF/bin/Debug/net5.0/Framework.Common.dll
 /media/morteza/6b53ded8-ff21-4348-afd5-962880213bc4/FilmnetProject/src/UserManagement/infrastructures/UserManagement.Persistance.EF/bin/Debug/net5.0/Framework.Context.dll
 /media/morteza/6b53ded8-ff21-4348-afd5-962880213bc4/FilmnetProject/src/UserManagement/infrastructures/UserManagement.Persistance.EF/bin/Debug/net5.0/Framework.Domain.dll
 /media/morteza/6b53ded8-ff21-4348-afd5-962880213bc4/FilmnetProject/src/UserManagement/infrastructures/UserManagement.Persistance.EF/bin/Debug/net5.0/Framework.Exception.dll
@@ -44,6 +45,7 @@
 /media/morteza/6b53ded8-ff21-4348-afd5-962880213bc4/FilmnetProject/src/UserManagement/infrastructures/UserManagement.Persistance.EF/bin/Debug/net5.0/Framework.Buses.pdb
 /media/morteza/6b53ded8-ff21-4348-afd5-962880213bc4/FilmnetProject/src/UserManagement/infrastructures/UserManagement.Persistance.EF/bin/Debug/net5.0/UserManagement.Domains.pdb
 /media/morteza/6b53ded8-ff21-4348-afd5-962880213bc4/FilmnetProject/src/UserManagement/infrastructures/UserManagement.Persistance.EF/bin/Debug/net5.0/Framework.Commands.pdb
+/media/morteza/6b53ded8-ff21-4348-afd5-962880213bc4/FilmnetProject/src/UserManagement/infrastructures/UserManagement.Persistance.EF/bin/Debug/net5.0/Framework.Common.pdb
 /media/morteza/6b53ded8-ff21-4348-afd5-962880213bc4/FilmnetProject/src/UserManagement/infrastructures/UserManagement.Persistance.EF/bin/Debug/net5.0/Framework.Context.pdb
 /media/morteza/6b53ded8-ff21-4348-afd5-962880213bc4/FilmnetProject/src/UserManagement/infrastructures/UserManagement.Persistance.EF/bin/Debug/net5.0/Framework.Domain.pdb
 /media/morteza/6b53ded8-ff21-4348-afd5-962880213bc4/FilmnetProject/src/UserManagement/infrastructures/UserManagement.Persistance.EF/bin/Debug/net5.0/Framework.Exception.pdb

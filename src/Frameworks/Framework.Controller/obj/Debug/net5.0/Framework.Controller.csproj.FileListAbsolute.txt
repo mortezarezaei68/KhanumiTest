@@ -50,9 +50,6 @@
 /media/morteza/6b53ded8-ff21-4348-afd5-962880213bc4/HalfMile/src/Frameworks/Framework.Controller/bin/Debug/net5.0/UserManagement.Domains.pdb
 /media/morteza/6b53ded8-ff21-4348-afd5-962880213bc4/HalfMile/src/Frameworks/Framework.Controller/bin/Debug/net5.0/Framework.Queries.dll
 /media/morteza/6b53ded8-ff21-4348-afd5-962880213bc4/HalfMile/src/Frameworks/Framework.Controller/bin/Debug/net5.0/Framework.Queries.pdb
-/media/morteza/6b53ded8-ff21-4348-afd5-962880213bc4/FilmnetProject/src/Frameworks/Framework.Controller/obj/Debug/net5.0/Framework.Controller.dll
-/media/morteza/6b53ded8-ff21-4348-afd5-962880213bc4/FilmnetProject/src/Frameworks/Framework.Controller/obj/Debug/net5.0/ref/Framework.Controller.dll
-/media/morteza/6b53ded8-ff21-4348-afd5-962880213bc4/FilmnetProject/src/Frameworks/Framework.Controller/obj/Debug/net5.0/Framework.Controller.pdb
 /media/morteza/6b53ded8-ff21-4348-afd5-962880213bc4/FilmnetProject/src/Frameworks/Framework.Controller/bin/Debug/net5.0/Framework.Controller.deps.json
 /media/morteza/6b53ded8-ff21-4348-afd5-962880213bc4/FilmnetProject/src/Frameworks/Framework.Controller/bin/Debug/net5.0/Framework.Controller.dll
 /media/morteza/6b53ded8-ff21-4348-afd5-962880213bc4/FilmnetProject/src/Frameworks/Framework.Controller/bin/Debug/net5.0/ref/Framework.Controller.dll
@@ -69,3 +66,6 @@
 /media/morteza/6b53ded8-ff21-4348-afd5-962880213bc4/FilmnetProject/src/Frameworks/Framework.Controller/obj/Debug/net5.0/Framework.Controller.AssemblyInfo.cs
 /media/morteza/6b53ded8-ff21-4348-afd5-962880213bc4/FilmnetProject/src/Frameworks/Framework.Controller/obj/Debug/net5.0/Framework.Controller.csproj.CoreCompileInputs.cache
 /media/morteza/6b53ded8-ff21-4348-afd5-962880213bc4/FilmnetProject/src/Frameworks/Framework.Controller/obj/Debug/net5.0/Framework.Controller.csproj.CopyComplete
+/media/morteza/6b53ded8-ff21-4348-afd5-962880213bc4/FilmnetProject/src/Frameworks/Framework.Controller/obj/Debug/net5.0/Framework.Controller.dll
+/media/morteza/6b53ded8-ff21-4348-afd5-962880213bc4/FilmnetProject/src/Frameworks/Framework.Controller/obj/Debug/net5.0/ref/Framework.Controller.dll
+/media/morteza/6b53ded8-ff21-4348-afd5-962880213bc4/FilmnetProject/src/Frameworks/Framework.Controller/obj/Debug/net5.0/Framework.Controller.pdb

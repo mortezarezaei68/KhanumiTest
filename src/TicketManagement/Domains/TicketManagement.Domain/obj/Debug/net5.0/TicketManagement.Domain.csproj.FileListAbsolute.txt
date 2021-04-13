@@ -1,0 +1,15 @@
+/media/morteza/6b53ded8-ff21-4348-afd5-962880213bc4/FilmnetProject/src/TicketManagement/Domains/TicketManagement.Domain/bin/Debug/net5.0/TicketManagement.Domain.deps.json
+/media/morteza/6b53ded8-ff21-4348-afd5-962880213bc4/FilmnetProject/src/TicketManagement/Domains/TicketManagement.Domain/bin/Debug/net5.0/TicketManagement.Domain.dll
+/media/morteza/6b53ded8-ff21-4348-afd5-962880213bc4/FilmnetProject/src/TicketManagement/Domains/TicketManagement.Domain/bin/Debug/net5.0/ref/TicketManagement.Domain.dll
+/media/morteza/6b53ded8-ff21-4348-afd5-962880213bc4/FilmnetProject/src/TicketManagement/Domains/TicketManagement.Domain/bin/Debug/net5.0/TicketManagement.Domain.pdb
+/media/morteza/6b53ded8-ff21-4348-afd5-962880213bc4/FilmnetProject/src/TicketManagement/Domains/TicketManagement.Domain/bin/Debug/net5.0/Framework.Domain.dll
+/media/morteza/6b53ded8-ff21-4348-afd5-962880213bc4/FilmnetProject/src/TicketManagement/Domains/TicketManagement.Domain/bin/Debug/net5.0/Framework.Domain.pdb
+/media/morteza/6b53ded8-ff21-4348-afd5-962880213bc4/FilmnetProject/src/TicketManagement/Domains/TicketManagement.Domain/obj/Debug/net5.0/TicketManagement.Domain.csprojAssemblyReference.cache
+/media/morteza/6b53ded8-ff21-4348-afd5-962880213bc4/FilmnetProject/src/TicketManagement/Domains/TicketManagement.Domain/obj/Debug/net5.0/TicketManagement.Domain.GeneratedMSBuildEditorConfig.editorconfig
+/media/morteza/6b53ded8-ff21-4348-afd5-962880213bc4/FilmnetProject/src/TicketManagement/Domains/TicketManagement.Domain/obj/Debug/net5.0/TicketManagement.Domain.AssemblyInfoInputs.cache
+/media/morteza/6b53ded8-ff21-4348-afd5-962880213bc4/FilmnetProject/src/TicketManagement/Domains/TicketManagement.Domain/obj/Debug/net5.0/TicketManagement.Domain.AssemblyInfo.cs
+/media/morteza/6b53ded8-ff21-4348-afd5-962880213bc4/FilmnetProject/src/TicketManagement/Domains/TicketManagement.Domain/obj/Debug/net5.0/TicketManagement.Domain.csproj.CoreCompileInputs.cache
+/media/morteza/6b53ded8-ff21-4348-afd5-962880213bc4/FilmnetProject/src/TicketManagement/Domains/TicketManagement.Domain/obj/Debug/net5.0/TicketManagement.Domain.csproj.CopyComplete
+/media/morteza/6b53ded8-ff21-4348-afd5-962880213bc4/FilmnetProject/src/TicketManagement/Domains/TicketManagement.Domain/obj/Debug/net5.0/TicketManagement.Domain.dll
+/media/morteza/6b53ded8-ff21-4348-afd5-962880213bc4/FilmnetProject/src/TicketManagement/Domains/TicketManagement.Domain/obj/Debug/net5.0/ref/TicketManagement.Domain.dll
+/media/morteza/6b53ded8-ff21-4348-afd5-962880213bc4/FilmnetProject/src/TicketManagement/Domains/TicketManagement.Domain/obj/Debug/net5.0/TicketManagement.Domain.pdb

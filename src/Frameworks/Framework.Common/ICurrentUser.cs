@@ -7,6 +7,7 @@ namespace Framework.Common
     {
         string GetUserIp();
         string GetUserId();
+        string GetUserIdFromHeader();
         void SetHttpOnlyUserCookie(string key, string value, DateTimeOffset date,string webSite);
         void CleanSecurityCookie(string key);
     }

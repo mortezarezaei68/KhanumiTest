@@ -4,4 +4,22 @@
         <TargetFramework>net5.0</TargetFramework>
     </PropertyGroup>
 
+    <ItemGroup>
+        <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="9.0.0" />
+        <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="5.0.0" />
+        <PackageReference Include="Scrutor.AspNetCore" Version="1.0.0" />
+        <PackageReference Include="Microsoft.AspNetCore.App" Version="2.1.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\..\Domains\TicketManagement.Domain\TicketManagement.Domain.csproj" />
+      <ProjectReference Include="..\..\ServiceContract\TicketManagement.CommandHandler\TicketManagement.CommandHandler.csproj" />
+      <ProjectReference Include="..\..\ServiceContract\TicketManagement.Queries\TicketManagement.Queries.csproj" />
+      <ProjectReference Include="..\TicketManagement.Persistance.EF\TicketManagement.Persistance.EF.csproj" />
+    </ItemGroup>
+    
+
+  
+    
+
 </Project>

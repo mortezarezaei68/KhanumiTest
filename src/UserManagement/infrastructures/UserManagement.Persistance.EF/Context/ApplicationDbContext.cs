@@ -85,11 +85,11 @@ namespace UserManagement.Persistance.Context
                 if (entry.State == EntityState.Added)
                 {
                     ((EntityAudit) entry.Entity).CreatedAt = DateTime.UtcNow;
-                    ((EntityAudit) entry.Entity).CreatedBy = currentUserId;
+                    ((EntityAudit) entry.Entity).CreatedBy = currentUserId.ToString();
                 }
 
                 ((EntityAudit) entry.Entity).UpdatedAt = DateTime.UtcNow;
-                ((EntityAudit) entry.Entity).UpdatedBy = currentUserId;
+                ((EntityAudit) entry.Entity).UpdatedBy = currentUserId.ToString();
             }
         }
 

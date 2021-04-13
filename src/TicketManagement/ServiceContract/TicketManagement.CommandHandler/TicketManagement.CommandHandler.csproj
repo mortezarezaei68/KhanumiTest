@@ -3,5 +3,14 @@
     <PropertyGroup>
         <TargetFramework>net5.0</TargetFramework>
     </PropertyGroup>
+    <ItemGroup>
+        <PackageReference Include="Scrutor.AspNetCore" Version="1.0.0" />
+        <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="9.0.0" />
+    </ItemGroup>
+    <ItemGroup>
+      <ProjectReference Include="..\..\..\Frameworks\Framework.Commands\Framework.Commands.csproj" />
+      <ProjectReference Include="..\..\Domains\TicketManagement.Domain\TicketManagement.Domain.csproj" />
+      <ProjectReference Include="..\TicketManagement.Commands\TicketManagement.Commands.csproj" />
+    </ItemGroup>
 
 </Project>

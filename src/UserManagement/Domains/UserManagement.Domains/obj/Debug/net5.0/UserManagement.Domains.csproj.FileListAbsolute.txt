@@ -21,12 +21,14 @@
 /media/morteza/6b53ded8-ff21-4348-afd5-962880213bc4/FilmnetProject/src/UserManagement/Domains/UserManagement.Domains/bin/Debug/net5.0/UserManagement.Domains.dll
 /media/morteza/6b53ded8-ff21-4348-afd5-962880213bc4/FilmnetProject/src/UserManagement/Domains/UserManagement.Domains/bin/Debug/net5.0/ref/UserManagement.Domains.dll
 /media/morteza/6b53ded8-ff21-4348-afd5-962880213bc4/FilmnetProject/src/UserManagement/Domains/UserManagement.Domains/bin/Debug/net5.0/UserManagement.Domains.pdb
+/media/morteza/6b53ded8-ff21-4348-afd5-962880213bc4/FilmnetProject/src/UserManagement/Domains/UserManagement.Domains/bin/Debug/net5.0/Framework.Common.dll
 /media/morteza/6b53ded8-ff21-4348-afd5-962880213bc4/FilmnetProject/src/UserManagement/Domains/UserManagement.Domains/bin/Debug/net5.0/Framework.Context.dll
 /media/morteza/6b53ded8-ff21-4348-afd5-962880213bc4/FilmnetProject/src/UserManagement/Domains/UserManagement.Domains/bin/Debug/net5.0/Framework.Domain.dll
 /media/morteza/6b53ded8-ff21-4348-afd5-962880213bc4/FilmnetProject/src/UserManagement/Domains/UserManagement.Domains/bin/Debug/net5.0/Framework.Exception.dll
 /media/morteza/6b53ded8-ff21-4348-afd5-962880213bc4/FilmnetProject/src/UserManagement/Domains/UserManagement.Domains/bin/Debug/net5.0/Framework.Context.pdb
 /media/morteza/6b53ded8-ff21-4348-afd5-962880213bc4/FilmnetProject/src/UserManagement/Domains/UserManagement.Domains/bin/Debug/net5.0/Framework.Domain.pdb
 /media/morteza/6b53ded8-ff21-4348-afd5-962880213bc4/FilmnetProject/src/UserManagement/Domains/UserManagement.Domains/bin/Debug/net5.0/Framework.Exception.pdb
+/media/morteza/6b53ded8-ff21-4348-afd5-962880213bc4/FilmnetProject/src/UserManagement/Domains/UserManagement.Domains/bin/Debug/net5.0/Framework.Common.pdb
 /media/morteza/6b53ded8-ff21-4348-afd5-962880213bc4/FilmnetProject/src/UserManagement/Domains/UserManagement.Domains/obj/Debug/net5.0/UserManagement.Domains.csprojAssemblyReference.cache
 /media/morteza/6b53ded8-ff21-4348-afd5-962880213bc4/FilmnetProject/src/UserManagement/Domains/UserManagement.Domains/obj/Debug/net5.0/UserManagement.Domains.GeneratedMSBuildEditorConfig.editorconfig
 /media/morteza/6b53ded8-ff21-4348-afd5-962880213bc4/FilmnetProject/src/UserManagement/Domains/UserManagement.Domains/obj/Debug/net5.0/UserManagement.Domains.AssemblyInfoInputs.cache

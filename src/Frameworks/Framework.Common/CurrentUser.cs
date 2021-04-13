@@ -23,6 +23,12 @@ namespace Framework.Common
 
             return userId;
         }
+        public string GetUserIdFromHeader()
+        {
+            _httpContextAccessor.HttpContext.Request.Headers.TryGetValue("userId", out var traceValue);
+
+            return traceValue;
+        }
         public void SetHttpOnlyUserCookie(string key, string value,DateTimeOffset date,string webSite)
         {
             _httpContextAccessor.HttpContext.Response.Cookies.Append(key, value, new CookieOptions() { HttpOnly = true, SameSite = SameSiteMode.Lax,Expires = date,Domain = webSite,Secure = false});

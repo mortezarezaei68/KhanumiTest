@@ -2170,7 +2170,8 @@
           "Framework.Domain": "1.0.0",
           "Framework.Queries": "1.0.0",
           "MassTransit": "7.1.7",
-          "MediatR": "9.0.0"
+          "MediatR": "9.0.0",
+          "RabbitMQ.Client": "6.2.1"
         },
         "compile": {
           "bin/placeholder/Framework.Buses.dll": {}
@@ -2223,6 +2224,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
         "dependencies": {
+          "Framework.Common": "1.0.0",
           "Microsoft.EntityFrameworkCore": "5.0.0"
         },
         "compile": {
@@ -2230,7 +2232,10 @@
         },
         "runtime": {
           "bin/placeholder/Framework.Context.dll": {}
-        }
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
       },
       "Framework.Domain/1.0.0": {
         "type": "project",
@@ -2286,7 +2291,10 @@
         },
         "runtime": {
           "bin/placeholder/ServiceContract.Command.dll": {}
-        }
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
       },
       "UserManagement.Domains/1.0.0": {
         "type": "project",
@@ -2302,7 +2310,10 @@
         },
         "runtime": {
           "bin/placeholder/UserManagement.Domains.dll": {}
-        }
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
       }
     }
   },
