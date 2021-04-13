@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net5.0</TargetFramework>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="MediatR" Version="9.0.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\..\..\Frameworks\Framework.Commands\Framework.Commands.csproj" />
+      <ProjectReference Include="..\..\..\Frameworks\Framework.Exception\Framework.Exception.csproj" />
+      <ProjectReference Include="..\..\Domains\UserManagement.Domains\UserManagement.Domains.csproj" />
+    </ItemGroup>
+
+</Project>

@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net5.0</TargetFramework>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\..\..\Frameworks\Framework.Common\Framework.Common.csproj" />
+      <ProjectReference Include="..\..\infrastructures\UserManagement.Persistance.EF\UserManagement.Persistance.EF.csproj" />
+      <ProjectReference Include="..\Service.Query.Model\Service.Query.Model.csproj" />
+    </ItemGroup>
+
+</Project>

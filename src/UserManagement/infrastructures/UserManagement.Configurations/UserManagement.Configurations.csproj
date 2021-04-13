@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net5.0</TargetFramework>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="9.0.0" />
+      <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="5.0.0" />
+        <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="5.0.3" />
+        <PackageReference Include="Scrutor.AspNetCore" Version="1.0.0" />
+        <PackageReference Include="Microsoft.AspNetCore.Authentication.Abstractions" Version="2.2.0" />
+        <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="5.0.1" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\..\..\Frameworks\Framework.Common\Framework.Common.csproj" />
+      <ProjectReference Include="..\..\..\Frameworks\Framework.UnitOfWork\Framework.UnitOfWork.csproj" />
+      <ProjectReference Include="..\..\ServiceContract\Service.Contract\Service.Contract.csproj" />
+      <ProjectReference Include="..\..\ServiceContract\Service.Query\Service.Query.csproj" />
+      <ProjectReference Include="..\UserManagement.Persistance.EF\UserManagement.Persistance.EF.csproj" />
+    </ItemGroup>
+
+</Project>
