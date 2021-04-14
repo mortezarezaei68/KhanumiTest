@@ -1,3 +1,4 @@
+using Framework.Common;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -9,6 +10,7 @@ namespace TicketManagement.Configurations
     {
         public static IServiceCollection TicketManagementDbInjections(this IServiceCollection services,IConfiguration configuration)
         {
+            services.AddScoped<ICurrentUser, CurrentUser>();
             services.AddDbContext<TicketManagementDbContext>(b =>
                 b.UseSqlServer(configuration.GetConnectionString("DefaultConnection"),
                     mySqlOptions => mySqlOptions.CommandTimeout(120)));

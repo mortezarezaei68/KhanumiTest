@@ -19,7 +19,7 @@ namespace TicketManagement.Configurations
         public static IServiceCollection BootstrapTicketManagement(this IServiceCollection services)
         {
             services.TryAddSingleton<IHttpContextAccessor, HttpContextAccessor>();
-            services.AddScoped<ICurrentUser, CurrentUser>();
+
 
             services.AddScoped(typeof(IPipelineBehavior<,>),
                 typeof(TransactionalCommandHandlerMediatR<,>));

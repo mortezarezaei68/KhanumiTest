@@ -25,9 +25,14 @@ namespace Framework.Common
         }
         public string GetUserIdFromHeader()
         {
-            _httpContextAccessor.HttpContext.Request.Headers.TryGetValue("userId", out var traceValue);
+            var checkHeaderIsExist=_httpContextAccessor.HttpContext.Request.Headers.TryGetValue("userId", out var traceValue);
 
-            return traceValue;
+            if (checkHeaderIsExist is true)
+            {
+                return traceValue;
+            }
+
+            return null;
         }
         public void SetHttpOnlyUserCookie(string key, string value,DateTimeOffset date,string webSite)
         {

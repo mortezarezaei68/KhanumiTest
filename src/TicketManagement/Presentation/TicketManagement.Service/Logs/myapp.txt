@@ -1844,3 +1844,311 @@ System.NullReferenceException: Object reference not set to an instance of an obj
    at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
    at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
 2021-04-13 23:41:24.847 +04:30 [INF] Request finished HTTP/2 POST https://localhost:5001/api/v1/Ticket application/json 41 - 500 - text/plain 8210.0615ms
+2021-04-14 07:55:26.933 +04:30 [INF] User profile is available. Using '/home/morteza/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2021-04-14 07:55:27.451 +04:30 [INF] Entity Framework Core 5.0.3 initialized 'TicketManagementDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: CommandTimeout=120 
+2021-04-14 07:55:42.264 +04:30 [FTL] Application startup exception
+System.AggregateException: One or more errors occurred. (A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: TCP Provider, error: 40 - Could not open a connection to SQL Server))
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: TCP Provider, error: 40 - Could not open a connection to SQL Server)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.Connect(ServerInfo serverInfo, SqlInternalConnectionTds connHandler, Boolean ignoreSniOpenTimeout, Int64 timerExpire, Boolean encrypt, Boolean trustServerCert, Boolean integratedSecurity, Boolean withFailover, SqlAuthenticationMethod authType)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerDatabaseCreator.<>c__DisplayClass20_0.<<ExistsAsync>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerDatabaseCreator.<>c__DisplayClass20_0.<<ExistsAsync>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerDatabaseCreator.<>c__DisplayClass20_0.<<ExistsAsync>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Migrations.HistoryRepository.ExistsAsync(CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.MigrateAsync(String targetMigration, CancellationToken cancellationToken)
+   at TicketManagement.Configurations.SeedData.InitializeTicketManagementDatabase(IApplicationBuilder app) in /media/morteza/6b53ded8-ff21-4348-afd5-962880213bc4/FilmnetProject/src/TicketManagement/Infrastructures/TicketManagement.Configurations/SeedData.cs:line 15
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.Wait(Int32 millisecondsTimeout, CancellationToken cancellationToken)
+   at System.Threading.Tasks.Task.Wait()
+   at TicketManagement.Service.Startup.Configure(IApplicationBuilder app, IWebHostEnvironment env) in /media/morteza/6b53ded8-ff21-4348-afd5-962880213bc4/FilmnetProject/src/TicketManagement/Presentation/TicketManagement.Service/Startup.cs:line 83
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at Microsoft.AspNetCore.Hosting.ConfigureBuilder.Invoke(Object instance, IApplicationBuilder builder)
+   at Microsoft.AspNetCore.Hosting.ConfigureBuilder.<>c__DisplayClass4_0.<Build>b__0(IApplicationBuilder builder)
+   at Microsoft.AspNetCore.Hosting.GenericWebHostBuilder.<>c__DisplayClass15_0.<UseStartup>b__1(IApplicationBuilder app)
+   at Microsoft.Extensions.DependencyInjection.AutoRegisterMiddleware.<>c__DisplayClass4_0.<Configure>b__0(IApplicationBuilder app)
+   at Microsoft.AspNetCore.Mvc.Filters.MiddlewareFilterBuilderStartupFilter.<>c__DisplayClass0_0.<Configure>g__MiddlewareFilterBuilder|0(IApplicationBuilder builder)
+   at Microsoft.AspNetCore.HostFilteringStartupFilter.<>c__DisplayClass0_0.<Configure>b__0(IApplicationBuilder app)
+   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+2021-04-14 07:55:42.324 +04:30 [FTL] Failed to start TicketManagement.Service
+2021-04-14 07:56:40.732 +04:30 [INF] User profile is available. Using '/home/morteza/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2021-04-14 07:56:41.235 +04:30 [INF] Entity Framework Core 5.0.3 initialized 'TicketManagementDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: CommandTimeout=120 
+2021-04-14 07:56:41.534 +04:30 [INF] Executed DbCommand (21ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+SELECT 1
+2021-04-14 07:56:41.566 +04:30 [INF] Executed DbCommand (19ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2021-04-14 07:56:41.570 +04:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+SELECT 1
+2021-04-14 07:56:41.574 +04:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2021-04-14 07:56:41.610 +04:30 [INF] Executed DbCommand (26ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2021-04-14 07:56:41.623 +04:30 [INF] No migrations were applied. The database is already up to date.
+2021-04-14 07:56:41.757 +04:30 [INF] Now listening on: https://localhost:5001
+2021-04-14 07:56:41.758 +04:30 [INF] Now listening on: http://localhost:5000
+2021-04-14 07:56:41.760 +04:30 [INF] Application started. Press Ctrl+C to shut down.
+2021-04-14 07:56:41.762 +04:30 [INF] Hosting environment: Development
+2021-04-14 07:56:41.764 +04:30 [INF] Content root path: /media/morteza/6b53ded8-ff21-4348-afd5-962880213bc4/FilmnetProject/src/TicketManagement/Presentation/TicketManagement.Service
+2021-04-14 07:56:42.969 +04:30 [INF] Request starting HTTP/2 GET https://localhost:5001/ - -
+2021-04-14 07:56:43.018 +04:30 [INF] Executing endpoint 'TicketManagement.Service.Controllers.HomeController.Index (TicketManagement.Service)'
+2021-04-14 07:56:43.034 +04:30 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller TicketManagement.Service.Controllers.HomeController (TicketManagement.Service).
+2021-04-14 07:56:43.052 +04:30 [INF] Executing ViewResult, running view Index.
+2021-04-14 07:56:43.144 +04:30 [INF] Executed ViewResult - view Index executed in 92.5118ms.
+2021-04-14 07:56:43.148 +04:30 [INF] Executed action TicketManagement.Service.Controllers.HomeController.Index (TicketManagement.Service) in 110.9221ms
+2021-04-14 07:56:43.150 +04:30 [INF] Executed endpoint 'TicketManagement.Service.Controllers.HomeController.Index (TicketManagement.Service)'
+2021-04-14 07:56:43.197 +04:30 [INF] Request starting HTTP/2 GET https://localhost:5001/lib/jquery/dist/jquery.min.js - -
+2021-04-14 07:56:43.197 +04:30 [INF] Request starting HTTP/2 GET https://localhost:5001/lib/bootstrap/dist/js/bootstrap.bundle.min.js - -
+2021-04-14 07:56:43.197 +04:30 [INF] Request starting HTTP/2 GET https://localhost:5001/css/site.css - -
+2021-04-14 07:56:43.197 +04:30 [INF] Request starting HTTP/2 GET https://localhost:5001/lib/bootstrap/dist/css/bootstrap.min.css - -
+2021-04-14 07:56:43.203 +04:30 [INF] Request starting HTTP/2 GET https://localhost:5001/js/site.js?v=BxFAw9RUJ1E4NycpKEjCNDeoSvr4RPHixdBq5wDnkeY - -
+2021-04-14 07:56:43.224 +04:30 [INF] Request finished HTTP/2 GET https://localhost:5001/ - - - 200 - text/html;+charset=utf-8 187.8784ms
+2021-04-14 07:56:43.235 +04:30 [INF] Sending file. Request path: '/js/site.js'. Physical path: '/media/morteza/6b53ded8-ff21-4348-afd5-962880213bc4/FilmnetProject/src/TicketManagement/Presentation/TicketManagement.Service/wwwroot/js/site.js'
+2021-04-14 07:56:43.238 +04:30 [INF] Request finished HTTP/2 GET https://localhost:5001/js/site.js?v=BxFAw9RUJ1E4NycpKEjCNDeoSvr4RPHixdBq5wDnkeY - - - 200 226 application/javascript 35.8979ms
+2021-04-14 07:56:43.262 +04:30 [INF] Sending file. Request path: '/css/site.css'. Physical path: '/media/morteza/6b53ded8-ff21-4348-afd5-962880213bc4/FilmnetProject/src/TicketManagement/Presentation/TicketManagement.Service/wwwroot/css/site.css'
+2021-04-14 07:56:43.273 +04:30 [INF] Sending file. Request path: '/lib/jquery/dist/jquery.min.js'. Physical path: '/media/morteza/6b53ded8-ff21-4348-afd5-962880213bc4/FilmnetProject/src/TicketManagement/Presentation/TicketManagement.Service/wwwroot/lib/jquery/dist/jquery.min.js'
+2021-04-14 07:56:43.273 +04:30 [INF] Sending file. Request path: '/lib/bootstrap/dist/js/bootstrap.bundle.min.js'. Physical path: '/media/morteza/6b53ded8-ff21-4348-afd5-962880213bc4/FilmnetProject/src/TicketManagement/Presentation/TicketManagement.Service/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js'
+2021-04-14 07:56:43.276 +04:30 [INF] Sending file. Request path: '/lib/bootstrap/dist/css/bootstrap.min.css'. Physical path: '/media/morteza/6b53ded8-ff21-4348-afd5-962880213bc4/FilmnetProject/src/TicketManagement/Presentation/TicketManagement.Service/wwwroot/lib/bootstrap/dist/css/bootstrap.min.css'
+2021-04-14 07:56:43.277 +04:30 [INF] Request finished HTTP/2 GET https://localhost:5001/css/site.css - - - 200 1346 text/css 80.8660ms
+2021-04-14 07:56:43.277 +04:30 [INF] Request finished HTTP/2 GET https://localhost:5001/lib/bootstrap/dist/js/bootstrap.bundle.min.js - - - 200 78635 application/javascript 80.8901ms
+2021-04-14 07:56:43.277 +04:30 [INF] Request finished HTTP/2 GET https://localhost:5001/lib/jquery/dist/jquery.min.js - - - 200 89476 application/javascript 80.9408ms
+2021-04-14 07:56:43.281 +04:30 [INF] Request finished HTTP/2 GET https://localhost:5001/lib/bootstrap/dist/css/bootstrap.min.css - - - 200 155758 text/css 80.9849ms
+2021-04-14 07:56:47.925 +04:30 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger - -
+2021-04-14 07:56:47.931 +04:30 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger - - - 301 0 - 7.0132ms
+2021-04-14 07:56:47.936 +04:30 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html - -
+2021-04-14 07:56:47.981 +04:30 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 45.6793ms
+2021-04-14 07:56:47.989 +04:30 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/swagger-ui.css - -
+2021-04-14 07:56:48.011 +04:30 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/swagger-ui-bundle.js - -
+2021-04-14 07:56:48.011 +04:30 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/swagger-ui-standalone-preset.js - -
+2021-04-14 07:56:48.039 +04:30 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2021-04-14 07:56:48.042 +04:30 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/swagger-ui-standalone-preset.js - - - 200 307021 application/javascript 50.7557ms
+2021-04-14 07:56:48.043 +04:30 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2021-04-14 07:56:48.048 +04:30 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2021-04-14 07:56:48.068 +04:30 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/swagger-ui.css - - - 200 141841 text/css 58.8401ms
+2021-04-14 07:56:48.070 +04:30 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/swagger-ui-bundle.js - - - 200 974176 application/javascript 79.3320ms
+2021-04-14 07:56:48.860 +04:30 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger - -
+2021-04-14 07:56:48.864 +04:30 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger - - - 301 0 - 4.7362ms
+2021-04-14 07:56:48.869 +04:30 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html - -
+2021-04-14 07:56:48.872 +04:30 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 3.7094ms
+2021-04-14 07:56:48.893 +04:30 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/swagger-ui.css - -
+2021-04-14 07:56:48.893 +04:30 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/swagger-ui-bundle.js - -
+2021-04-14 07:56:48.897 +04:30 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/swagger-ui-standalone-preset.js - -
+2021-04-14 07:56:48.903 +04:30 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2021-04-14 07:56:48.905 +04:30 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/swagger-ui.css - - - 200 141841 text/css 12.4382ms
+2021-04-14 07:56:48.906 +04:30 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2021-04-14 07:56:48.909 +04:30 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2021-04-14 07:56:48.912 +04:30 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/swagger-ui-standalone-preset.js - - - 200 307021 application/javascript 15.9788ms
+2021-04-14 07:56:48.914 +04:30 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/swagger-ui-bundle.js - - - 200 974176 application/javascript 19.4180ms
+2021-04-14 07:56:49.026 +04:30 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - -
+2021-04-14 07:56:49.075 +04:30 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 48.9737ms
+2021-04-14 07:56:52.708 +04:30 [INF] Request starting HTTP/2 POST https://localhost:5001/api/v1/Ticket application/json 41
+2021-04-14 07:56:52.719 +04:30 [INF] CORS policy execution successful.
+2021-04-14 07:56:52.721 +04:30 [INF] Executing endpoint 'TicketManagement.Service.Controllers.TicketController.AddTicket (TicketManagement.Service)'
+2021-04-14 07:56:52.732 +04:30 [INF] Route matched with {action = "AddTicket", controller = "Ticket"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] AddTicket(TicketManagement.Commands.AddTicketCommandRequest) on controller TicketManagement.Service.Controllers.TicketController (TicketManagement.Service).
+2021-04-14 07:56:56.986 +04:30 [INF] Entity Framework Core 5.0.3 initialized 'TicketManagementDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: CommandTimeout=120 
+2021-04-14 07:57:00.367 +04:30 [INF] Executed action TicketManagement.Service.Controllers.TicketController.AddTicket (TicketManagement.Service) in 7633.5073ms
+2021-04-14 07:57:00.369 +04:30 [INF] Executed endpoint 'TicketManagement.Service.Controllers.TicketController.AddTicket (TicketManagement.Service)'
+2021-04-14 07:57:00.371 +04:30 [ERR] An unhandled exception has occurred while executing the request.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at Framework.Context.CoreDbContext.UpdateTimestamps(List`1 entries) in /media/morteza/6b53ded8-ff21-4348-afd5-962880213bc4/FilmnetProject/src/Frameworks/Framework.Context/CoreDbContext.cs:line 74
+   at Framework.Context.CoreDbContext.OnBeforeSaving() in /media/morteza/6b53ded8-ff21-4348-afd5-962880213bc4/FilmnetProject/src/Frameworks/Framework.Context/CoreDbContext.cs:line 43
+   at Framework.Context.CoreDbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken) in /media/morteza/6b53ded8-ff21-4348-afd5-962880213bc4/FilmnetProject/src/Frameworks/Framework.Context/CoreDbContext.cs:line 33
+   at Framework.UnitOfWork.UnitOfWork`1.SaveChangesAsync(CancellationToken cancellationToken) in /media/morteza/6b53ded8-ff21-4348-afd5-962880213bc4/FilmnetProject/src/Frameworks/Framework.UnitOfWork/UnitOfWork.cs:line 54
+   at Framework.UnitOfWork.UnitOfWork`1.CommitAsync(IDbContextTransaction transaction) in /media/morteza/6b53ded8-ff21-4348-afd5-962880213bc4/FilmnetProject/src/Frameworks/Framework.UnitOfWork/UnitOfWork.cs:line 68
+   at Framework.Commands.CommandHandlers.TransactionalCommandHandlerMediatR`2.Handle(TCommand request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next) in /media/morteza/6b53ded8-ff21-4348-afd5-962880213bc4/FilmnetProject/src/Frameworks/Framework.Commands/CommandHandlers/TransactionalCommandHandlerMediatR.cs:line 36
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPostProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPreProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at Framework.Buses.EventBus.Issue[TResponse](IRequest`1 command, CancellationToken cancellationToken) in /media/morteza/6b53ded8-ff21-4348-afd5-962880213bc4/FilmnetProject/src/Frameworks/Framework.Buses/EventBus.cs:line 22
+   at TicketManagement.Service.Controllers.TicketController.AddTicket(AddTicketCommandRequest command) in /media/morteza/6b53ded8-ff21-4348-afd5-962880213bc4/FilmnetProject/src/TicketManagement/Presentation/TicketManagement.Service/Controllers/TicketController.cs:line 26
+   at lambda_method24(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2021-04-14 07:57:00.423 +04:30 [INF] Request finished HTTP/2 POST https://localhost:5001/api/v1/Ticket application/json 41 - 500 - text/plain 7715.3528ms
+2021-04-14 07:57:50.073 +04:30 [INF] User profile is available. Using '/home/morteza/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2021-04-14 07:57:50.530 +04:30 [INF] Entity Framework Core 5.0.3 initialized 'TicketManagementDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: CommandTimeout=120 
+2021-04-14 07:57:50.841 +04:30 [INF] Executed DbCommand (26ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+SELECT 1
+2021-04-14 07:57:50.872 +04:30 [INF] Executed DbCommand (17ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2021-04-14 07:57:50.879 +04:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+SELECT 1
+2021-04-14 07:57:50.904 +04:30 [INF] Executed DbCommand (21ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2021-04-14 07:57:50.921 +04:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2021-04-14 07:57:50.935 +04:30 [INF] No migrations were applied. The database is already up to date.
+2021-04-14 07:57:51.056 +04:30 [INF] Now listening on: https://localhost:5001
+2021-04-14 07:57:51.077 +04:30 [INF] Now listening on: http://localhost:5000
+2021-04-14 07:57:51.079 +04:30 [INF] Application started. Press Ctrl+C to shut down.
+2021-04-14 07:57:51.080 +04:30 [INF] Hosting environment: Development
+2021-04-14 07:57:51.081 +04:30 [INF] Content root path: /media/morteza/6b53ded8-ff21-4348-afd5-962880213bc4/FilmnetProject/src/TicketManagement/Presentation/TicketManagement.Service
+2021-04-14 07:57:51.746 +04:30 [INF] Request starting HTTP/2 GET https://localhost:5001/ - -
+2021-04-14 07:57:51.782 +04:30 [INF] Executing endpoint 'TicketManagement.Service.Controllers.HomeController.Index (TicketManagement.Service)'
+2021-04-14 07:57:51.794 +04:30 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller TicketManagement.Service.Controllers.HomeController (TicketManagement.Service).
+2021-04-14 07:57:51.807 +04:30 [INF] Executing ViewResult, running view Index.
+2021-04-14 07:57:51.875 +04:30 [INF] Executed ViewResult - view Index executed in 68.4ms.
+2021-04-14 07:57:51.878 +04:30 [INF] Executed action TicketManagement.Service.Controllers.HomeController.Index (TicketManagement.Service) in 82.1892ms
+2021-04-14 07:57:51.880 +04:30 [INF] Executed endpoint 'TicketManagement.Service.Controllers.HomeController.Index (TicketManagement.Service)'
+2021-04-14 07:57:51.886 +04:30 [INF] Request starting HTTP/2 GET https://localhost:5001/lib/bootstrap/dist/css/bootstrap.min.css - -
+2021-04-14 07:57:51.886 +04:30 [INF] Request starting HTTP/2 GET https://localhost:5001/css/site.css - -
+2021-04-14 07:57:51.887 +04:30 [INF] Request starting HTTP/2 GET https://localhost:5001/lib/jquery/dist/jquery.min.js - -
+2021-04-14 07:57:51.910 +04:30 [INF] Request starting HTTP/2 GET https://localhost:5001/lib/bootstrap/dist/js/bootstrap.bundle.min.js - -
+2021-04-14 07:57:51.950 +04:30 [INF] Request starting HTTP/2 GET https://localhost:5001/js/site.js?v=BxFAw9RUJ1E4NycpKEjCNDeoSvr4RPHixdBq5wDnkeY - -
+2021-04-14 07:57:51.953 +04:30 [INF] Request finished HTTP/2 GET https://localhost:5001/ - - - 200 - text/html;+charset=utf-8 185.5612ms
+2021-04-14 07:57:52.009 +04:30 [INF] Sending file. Request path: '/css/site.css'. Physical path: '/media/morteza/6b53ded8-ff21-4348-afd5-962880213bc4/FilmnetProject/src/TicketManagement/Presentation/TicketManagement.Service/wwwroot/css/site.css'
+2021-04-14 07:57:52.009 +04:30 [INF] Sending file. Request path: '/js/site.js'. Physical path: '/media/morteza/6b53ded8-ff21-4348-afd5-962880213bc4/FilmnetProject/src/TicketManagement/Presentation/TicketManagement.Service/wwwroot/js/site.js'
+2021-04-14 07:57:52.017 +04:30 [INF] Sending file. Request path: '/lib/bootstrap/dist/js/bootstrap.bundle.min.js'. Physical path: '/media/morteza/6b53ded8-ff21-4348-afd5-962880213bc4/FilmnetProject/src/TicketManagement/Presentation/TicketManagement.Service/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js'
+2021-04-14 07:57:52.019 +04:30 [INF] Sending file. Request path: '/lib/jquery/dist/jquery.min.js'. Physical path: '/media/morteza/6b53ded8-ff21-4348-afd5-962880213bc4/FilmnetProject/src/TicketManagement/Presentation/TicketManagement.Service/wwwroot/lib/jquery/dist/jquery.min.js'
+2021-04-14 07:57:52.021 +04:30 [INF] Request finished HTTP/2 GET https://localhost:5001/css/site.css - - - 200 1346 text/css 133.1248ms
+2021-04-14 07:57:52.021 +04:30 [INF] Request finished HTTP/2 GET https://localhost:5001/js/site.js?v=BxFAw9RUJ1E4NycpKEjCNDeoSvr4RPHixdBq5wDnkeY - - - 200 226 application/javascript 88.8268ms
+2021-04-14 07:57:52.022 +04:30 [INF] Sending file. Request path: '/lib/bootstrap/dist/css/bootstrap.min.css'. Physical path: '/media/morteza/6b53ded8-ff21-4348-afd5-962880213bc4/FilmnetProject/src/TicketManagement/Presentation/TicketManagement.Service/wwwroot/lib/bootstrap/dist/css/bootstrap.min.css'
+2021-04-14 07:57:52.044 +04:30 [INF] Request finished HTTP/2 GET https://localhost:5001/lib/bootstrap/dist/js/bootstrap.bundle.min.js - - - 200 78635 application/javascript 112.5731ms
+2021-04-14 07:57:52.046 +04:30 [INF] Request finished HTTP/2 GET https://localhost:5001/lib/jquery/dist/jquery.min.js - - - 200 89476 application/javascript 159.9519ms
+2021-04-14 07:57:52.048 +04:30 [INF] Request finished HTTP/2 GET https://localhost:5001/lib/bootstrap/dist/css/bootstrap.min.css - - - 200 155758 text/css 161.7761ms
+2021-04-14 07:57:54.315 +04:30 [INF] Request starting HTTP/2 POST https://localhost:5001/api/v1/Ticket application/json 41
+2021-04-14 07:57:54.326 +04:30 [INF] CORS policy execution successful.
+2021-04-14 07:57:54.328 +04:30 [INF] Executing endpoint 'TicketManagement.Service.Controllers.TicketController.AddTicket (TicketManagement.Service)'
+2021-04-14 07:57:54.339 +04:30 [INF] Route matched with {action = "AddTicket", controller = "Ticket"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] AddTicket(TicketManagement.Commands.AddTicketCommandRequest) on controller TicketManagement.Service.Controllers.TicketController (TicketManagement.Service).
+2021-04-14 07:57:57.305 +04:30 [INF] Entity Framework Core 5.0.3 initialized 'TicketManagementDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: CommandTimeout=120 
+2021-04-14 07:57:59.313 +04:30 [INF] Executed action TicketManagement.Service.Controllers.TicketController.AddTicket (TicketManagement.Service) in 4972.1802ms
+2021-04-14 07:57:59.315 +04:30 [INF] Executed endpoint 'TicketManagement.Service.Controllers.TicketController.AddTicket (TicketManagement.Service)'
+2021-04-14 07:57:59.317 +04:30 [ERR] An unhandled exception has occurred while executing the request.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at Framework.Context.CoreDbContext.UpdateTimestamps(List`1 entries) in /media/morteza/6b53ded8-ff21-4348-afd5-962880213bc4/FilmnetProject/src/Frameworks/Framework.Context/CoreDbContext.cs:line 74
+   at Framework.Context.CoreDbContext.OnBeforeSaving() in /media/morteza/6b53ded8-ff21-4348-afd5-962880213bc4/FilmnetProject/src/Frameworks/Framework.Context/CoreDbContext.cs:line 43
+   at Framework.Context.CoreDbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken) in /media/morteza/6b53ded8-ff21-4348-afd5-962880213bc4/FilmnetProject/src/Frameworks/Framework.Context/CoreDbContext.cs:line 33
+   at Framework.UnitOfWork.UnitOfWork`1.SaveChangesAsync(CancellationToken cancellationToken) in /media/morteza/6b53ded8-ff21-4348-afd5-962880213bc4/FilmnetProject/src/Frameworks/Framework.UnitOfWork/UnitOfWork.cs:line 54
+   at Framework.UnitOfWork.UnitOfWork`1.CommitAsync(IDbContextTransaction transaction) in /media/morteza/6b53ded8-ff21-4348-afd5-962880213bc4/FilmnetProject/src/Frameworks/Framework.UnitOfWork/UnitOfWork.cs:line 68
+   at Framework.Commands.CommandHandlers.TransactionalCommandHandlerMediatR`2.Handle(TCommand request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next) in /media/morteza/6b53ded8-ff21-4348-afd5-962880213bc4/FilmnetProject/src/Frameworks/Framework.Commands/CommandHandlers/TransactionalCommandHandlerMediatR.cs:line 36
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPostProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPreProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at Framework.Buses.EventBus.Issue[TResponse](IRequest`1 command, CancellationToken cancellationToken) in /media/morteza/6b53ded8-ff21-4348-afd5-962880213bc4/FilmnetProject/src/Frameworks/Framework.Buses/EventBus.cs:line 22
+   at TicketManagement.Service.Controllers.TicketController.AddTicket(AddTicketCommandRequest command) in /media/morteza/6b53ded8-ff21-4348-afd5-962880213bc4/FilmnetProject/src/TicketManagement/Presentation/TicketManagement.Service/Controllers/TicketController.cs:line 26
+   at lambda_method24(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2021-04-14 07:57:59.370 +04:30 [INF] Request finished HTTP/2 POST https://localhost:5001/api/v1/Ticket application/json 41 - 500 - text/plain 5054.9227ms
+2021-04-14 07:58:43.517 +04:30 [INF] User profile is available. Using '/home/morteza/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2021-04-14 07:58:43.986 +04:30 [INF] Entity Framework Core 5.0.3 initialized 'TicketManagementDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: CommandTimeout=120 
+2021-04-14 07:58:44.275 +04:30 [INF] Executed DbCommand (24ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+SELECT 1
+2021-04-14 07:58:44.304 +04:30 [INF] Executed DbCommand (16ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2021-04-14 07:58:44.312 +04:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+SELECT 1
+2021-04-14 07:58:44.344 +04:30 [INF] Executed DbCommand (30ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2021-04-14 07:58:44.401 +04:30 [INF] Executed DbCommand (23ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2021-04-14 07:58:44.422 +04:30 [INF] No migrations were applied. The database is already up to date.
+2021-04-14 07:58:44.567 +04:30 [INF] Now listening on: https://localhost:5001
+2021-04-14 07:58:44.569 +04:30 [INF] Now listening on: http://localhost:5000
+2021-04-14 07:58:44.570 +04:30 [INF] Application started. Press Ctrl+C to shut down.
+2021-04-14 07:58:44.572 +04:30 [INF] Hosting environment: Development
+2021-04-14 07:58:44.574 +04:30 [INF] Content root path: /media/morteza/6b53ded8-ff21-4348-afd5-962880213bc4/FilmnetProject/src/TicketManagement/Presentation/TicketManagement.Service
+2021-04-14 07:58:45.207 +04:30 [INF] Request starting HTTP/2 GET https://localhost:5001/ - -
+2021-04-14 07:58:45.239 +04:30 [INF] Executing endpoint 'TicketManagement.Service.Controllers.HomeController.Index (TicketManagement.Service)'
+2021-04-14 07:58:45.251 +04:30 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller TicketManagement.Service.Controllers.HomeController (TicketManagement.Service).
+2021-04-14 07:58:45.264 +04:30 [INF] Executing ViewResult, running view Index.
+2021-04-14 07:58:45.326 +04:30 [INF] Executed ViewResult - view Index executed in 64.6005ms.
+2021-04-14 07:58:45.329 +04:30 [INF] Executed action TicketManagement.Service.Controllers.HomeController.Index (TicketManagement.Service) in 76.0793ms
+2021-04-14 07:58:45.331 +04:30 [INF] Executed endpoint 'TicketManagement.Service.Controllers.HomeController.Index (TicketManagement.Service)'
+2021-04-14 07:58:45.335 +04:30 [INF] Request finished HTTP/2 GET https://localhost:5001/ - - - 200 - text/html;+charset=utf-8 129.0464ms
+2021-04-14 07:58:45.340 +04:30 [INF] Request starting HTTP/2 GET https://localhost:5001/css/site.css - -
+2021-04-14 07:58:45.340 +04:30 [INF] Request starting HTTP/2 GET https://localhost:5001/lib/bootstrap/dist/css/bootstrap.min.css - -
+2021-04-14 07:58:45.342 +04:30 [INF] Request starting HTTP/2 GET https://localhost:5001/lib/jquery/dist/jquery.min.js - -
+2021-04-14 07:58:45.365 +04:30 [INF] Request starting HTTP/2 GET https://localhost:5001/lib/bootstrap/dist/js/bootstrap.bundle.min.js - -
+2021-04-14 07:58:45.367 +04:30 [INF] Request starting HTTP/2 GET https://localhost:5001/js/site.js?v=BxFAw9RUJ1E4NycpKEjCNDeoSvr4RPHixdBq5wDnkeY - -
+2021-04-14 07:58:45.531 +04:30 [INF] Sending file. Request path: '/css/site.css'. Physical path: '/media/morteza/6b53ded8-ff21-4348-afd5-962880213bc4/FilmnetProject/src/TicketManagement/Presentation/TicketManagement.Service/wwwroot/css/site.css'
+2021-04-14 07:58:45.531 +04:30 [INF] Sending file. Request path: '/js/site.js'. Physical path: '/media/morteza/6b53ded8-ff21-4348-afd5-962880213bc4/FilmnetProject/src/TicketManagement/Presentation/TicketManagement.Service/wwwroot/js/site.js'
+2021-04-14 07:58:45.531 +04:30 [INF] Sending file. Request path: '/lib/bootstrap/dist/css/bootstrap.min.css'. Physical path: '/media/morteza/6b53ded8-ff21-4348-afd5-962880213bc4/FilmnetProject/src/TicketManagement/Presentation/TicketManagement.Service/wwwroot/lib/bootstrap/dist/css/bootstrap.min.css'
+2021-04-14 07:58:45.531 +04:30 [INF] Sending file. Request path: '/lib/bootstrap/dist/js/bootstrap.bundle.min.js'. Physical path: '/media/morteza/6b53ded8-ff21-4348-afd5-962880213bc4/FilmnetProject/src/TicketManagement/Presentation/TicketManagement.Service/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js'
+2021-04-14 07:58:45.531 +04:30 [INF] Sending file. Request path: '/lib/jquery/dist/jquery.min.js'. Physical path: '/media/morteza/6b53ded8-ff21-4348-afd5-962880213bc4/FilmnetProject/src/TicketManagement/Presentation/TicketManagement.Service/wwwroot/lib/jquery/dist/jquery.min.js'
+2021-04-14 07:58:45.540 +04:30 [INF] Request finished HTTP/2 GET https://localhost:5001/lib/jquery/dist/jquery.min.js - - - 200 89476 application/javascript 199.5382ms
+2021-04-14 07:58:45.540 +04:30 [INF] Request finished HTTP/2 GET https://localhost:5001/lib/bootstrap/dist/js/bootstrap.bundle.min.js - - - 200 78635 application/javascript 174.7876ms
+2021-04-14 07:58:45.540 +04:30 [INF] Request finished HTTP/2 GET https://localhost:5001/js/site.js?v=BxFAw9RUJ1E4NycpKEjCNDeoSvr4RPHixdBq5wDnkeY - - - 200 226 application/javascript 174.4658ms
+2021-04-14 07:58:45.540 +04:30 [INF] Request finished HTTP/2 GET https://localhost:5001/lib/bootstrap/dist/css/bootstrap.min.css - - - 200 155758 text/css 199.7266ms
+2021-04-14 07:58:45.540 +04:30 [INF] Request finished HTTP/2 GET https://localhost:5001/css/site.css - - - 200 1346 text/css 199.6757ms
+2021-04-14 07:58:47.813 +04:30 [INF] Request starting HTTP/2 POST https://localhost:5001/api/v1/Ticket application/json 41
+2021-04-14 07:58:47.828 +04:30 [INF] CORS policy execution successful.
+2021-04-14 07:58:47.830 +04:30 [INF] Executing endpoint 'TicketManagement.Service.Controllers.TicketController.AddTicket (TicketManagement.Service)'
+2021-04-14 07:58:47.842 +04:30 [INF] Route matched with {action = "AddTicket", controller = "Ticket"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] AddTicket(TicketManagement.Commands.AddTicketCommandRequest) on controller TicketManagement.Service.Controllers.TicketController (TicketManagement.Service).
+2021-04-14 07:58:50.565 +04:30 [INF] Entity Framework Core 5.0.3 initialized 'TicketManagementDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: CommandTimeout=120 
+2021-04-14 07:58:53.222 +04:30 [INF] Executed DbCommand (13ms) [Parameters=[@p0='?' (DbType = DateTime2), @p1='?' (DbType = Int32), @p2='?' (DbType = DateTime2), @p3='?' (Size = 4000), @p4='?' (DbType = Boolean), @p5='?' (DbType = Int32), @p6='?' (Size = 4000), @p7='?' (Size = 4000), @p8='?' (DbType = DateTime2), @p9='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='120']
+SET NOCOUNT ON;
+INSERT INTO [Tickets] ([CreatedAt], [CreatedBy], [DeletedAt], [Description], [IsDeleted], [TicketStatus], [Title], [TrackingCode], [UpdatedAt], [UpdatedBy])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9);
+SELECT [Id]
+FROM [Tickets]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+2021-04-14 07:58:53.394 +04:30 [INF] Executing JsonResult, writing value of type 'TicketManagement.Commands.AddTicketCommandResponse'.
+2021-04-14 07:58:53.413 +04:30 [INF] Executed action TicketManagement.Service.Controllers.TicketController.AddTicket (TicketManagement.Service) in 5569.9463ms
+2021-04-14 07:58:53.416 +04:30 [INF] Executed endpoint 'TicketManagement.Service.Controllers.TicketController.AddTicket (TicketManagement.Service)'
+2021-04-14 07:58:53.429 +04:30 [INF] Request finished HTTP/2 POST https://localhost:5001/api/v1/Ticket application/json 41 - 200 - application/json;+charset=utf-8 5615.4678ms
