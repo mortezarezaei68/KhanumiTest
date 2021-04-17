@@ -2,7 +2,9 @@
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
+using FluentValidation;
 using Framework.Commands.CommandHandlers;
+using Framework.Common;
 using Framework.Exception.Exceptions.Enum;
 using MediatR;
 using TicketManagement.Commands;
@@ -13,7 +15,7 @@ namespace TicketManagement.CommandHandler
     public class AddTicketCommandHandler:ITransactionalCommandHandlerMediatR<AddTicketCommandRequest,AddTicketCommandResponse>
     {
         private readonly ITicketRepository _ticketRepository;
-        private static Random random = new Random();
+        
         public AddTicketCommandHandler(ITicketRepository ticketRepository)
         {
             _ticketRepository = ticketRepository;
@@ -21,16 +23,21 @@ namespace TicketManagement.CommandHandler
 
         public  Task<AddTicketCommandResponse> Handle(AddTicketCommandRequest request, CancellationToken cancellationToken, RequestHandlerDelegate<AddTicketCommandResponse> next)
         {
-            const string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
-            var refreshToken= new string(Enumerable.Repeat(chars, 6)
-                .Select(s => s[random.Next(s.Length)]).ToArray());
-            var ticket = new Ticket(request.Description, request.Title,refreshToken);
+            var ticket = new Ticket(request.Description, request.Title,CodeGenerator.CreateCode());
             _ticketRepository.Add(ticket);
             var ticketResponse = new TicketResponse
             {
                 TrackingCode = ticket.TrackingCode
             };
             return Task.FromResult( new AddTicketCommandResponse(true, ResultCode.Success,ticketResponse));
+        }
+    }
+    public class AddTicketCommandRequestValidator : AbstractValidator<AddTicketCommandRequest>
+    {
+        public AddTicketCommandRequestValidator()
+        {
+            RuleFor(p => p.Description).NotEmpty().NotNull();
+            RuleFor(p => p.Title).NotEmpty().NotNull();
         }
     }
 }

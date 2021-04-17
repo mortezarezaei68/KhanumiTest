@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using Framework.Common;
+using Framework.Domain.Core;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.ChangeTracking;
 
@@ -11,15 +12,15 @@ namespace Framework.Context
 {
     public class CoreDbContext : DbContext
     {
-        //private readonly ICurrentUser _currentUser;
+        private readonly ICurrentUser _currentUser;
 
-        public CoreDbContext(DbContextOptions options): base(options)
-        {
-        }
-        // private CoreDbContext(DbContextOptions options, ICurrentUser currentUser) : base(options)
+        // public CoreDbContext(DbContextOptions options): base(options)
         // {
-        //     _currentUser = currentUser;
         // }
+        public CoreDbContext(DbContextOptions options, ICurrentUser currentUser) : base(options)
+        {
+            _currentUser = currentUser;
+        }
 
         public override int SaveChanges(bool acceptAllChangesOnSuccess)
         {
@@ -71,7 +72,7 @@ namespace Framework.Context
                             || x.State == EntityState.Modified);
 
             // TODO: Get real current user id
-            var currentUserId = "1";
+            var currentUserId = _currentUser.GetUserIdFromHeader();
 
             foreach (var entry in filtered)
             {

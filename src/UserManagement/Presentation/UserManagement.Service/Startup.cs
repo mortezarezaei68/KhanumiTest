@@ -4,6 +4,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using Framework.Common;
 using Framework.Controller.Extensions;
+using GreenPipes;
+using MassTransit;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -11,7 +13,9 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Service.Contract.CustomerCommandHandlers;
+using Service.Query.AdminUserQuery;
 using UserManagement.Configurations;
+using UserManagement.Service.Config;
 
 namespace UserManagement.Service
 {
@@ -20,8 +24,9 @@ namespace UserManagement.Service
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
+            cfg = Configuration.Get<AppConfig>();
         }
-
+        readonly AppConfig cfg;
         public IConfiguration Configuration { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
@@ -33,6 +38,43 @@ namespace UserManagement.Service
             services.AddCustomController<AddCustomerCommandRequestValidator>();
             services.AddCustomAuthenticationAuthorization(Configuration);
             services.AddCustomSwagger();
+            // services.AddMassTransit(x =>
+            // {
+            //     x.AddConsumer<GetAllUserConsumer>();
+            //
+            //     x.UsingRabbitMq((context, cfg) =>
+            //     {
+            //         cfg.ReceiveEndpoint(e =>
+            //         {
+            //             e.PrefetchCount = 16;
+            //             e.UseMessageRetry(r => r.Interval(2, 3000));
+            //             e.ConfigureConsumer<GetAllUserConsumer>(context);
+            //         });
+            //     } );
+            // });
+
+            services.AddMassTransit(x =>
+            {
+                x.AddConsumer<GetAllUserConsumer>();
+
+                x.AddBus(context => Bus.Factory.CreateUsingRabbitMq(c =>
+                {
+                    c.Host(cfg.MassTransit.Host, a =>
+                    {
+                        a.Username("guest");
+                        a.Password("guest");
+                    });
+                     // var url = cfg.MassTransit.Host + (cfg.MassTransit.Host.EndsWith("/") ? "" : "/") + cfg.MassTransit.Queue;
+                    c.ReceiveEndpoint(cfg.MassTransit.Queue, e =>
+                    {
+                        e.PrefetchCount = 16;
+                        e.UseMessageRetry(r => r.Interval(2, 3000));
+                        e.ConfigureConsumer<GetAllUserConsumer>(context);
+                    });
+                }));
+            });
+
+            services.AddMassTransitHostedService();
             services.AddCors(option =>
             {
                 option.AddPolicy("EnableCorsForHttpOnly", builder =>

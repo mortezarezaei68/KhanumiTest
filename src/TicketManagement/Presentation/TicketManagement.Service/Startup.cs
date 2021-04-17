@@ -1,19 +1,17 @@
+
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Framework.Buses.RabbitMQBus;
-using Framework.Commands;
 using Framework.Common;
+using Framework.Controller.Extensions;
+using MassTransit;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using TicketManagement.CommandHandler;
-using TicketManagement.Commands;
 using TicketManagement.Configurations;
+using TicketManagement.Query.Models;
+using TicketManagement.Service.Config;
 
 namespace TicketManagement.Service
 {
@@ -22,17 +20,35 @@ namespace TicketManagement.Service
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
+            _cfg = Configuration.Get<AppConfig>();
         }
-
+        readonly AppConfig _cfg;
         public IConfiguration Configuration { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddControllersWithViews();
+            services.AddCustomController<AddTicketCommandRequestValidator>();
             services.TicketManagementDbInjections(Configuration);
             services.BootstrapEventTicketManagement();
             services.BootstrapTicketManagement();
+            services.AddMassTransit(x =>
+            {
+                x.AddBus(context => Bus.Factory.CreateUsingRabbitMq(c =>
+                {
+                    var url = _cfg.MassTransit.Host + (_cfg.MassTransit.Host.EndsWith("/") ? "" : "/") ;
+                    c.Host(url, a =>
+                    {
+                        a.Username("guest");
+                        a.Password("guest");
+                    });
+                    c.ConfigureEndpoints(context);
+                }));
+                
+                x.AddRequestClient<GetAllUserRequest>();
+            });
+
+            services.AddMassTransitHostedService();
             services.AddCustomSwagger();
             services.AddCors(option =>
             {

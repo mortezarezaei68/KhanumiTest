@@ -18,9 +18,8 @@ namespace TicketManagement.Persistance.EF.Context
         public DbSet<AnswerTicket> AnswerTickets { get; set; }
 
 
-        public TicketManagementDbContext(DbContextOptions options) : base(options)
+        public TicketManagementDbContext(DbContextOptions options, ICurrentUser currentUser) : base(options, currentUser)
         {
         }
-        
     }
 }

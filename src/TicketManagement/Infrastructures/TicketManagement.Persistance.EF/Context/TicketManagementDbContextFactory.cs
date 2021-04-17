@@ -1,5 +1,7 @@
 using System;
 using System.IO;
+using Framework.Common;
+using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Design;
 using Microsoft.Extensions.Configuration;
@@ -11,10 +13,12 @@ namespace TicketManagement.Persistance.EF.Context
     {
         public TicketManagementDbContext CreateDbContext(string[] args)
         {
+            IHttpContextAccessor accessor = new HttpContextAccessor();
+            ICurrentUser currentUser = new CurrentUser(accessor);
             var config = GetAppSetting();
             var optionsBuilder = new DbContextOptionsBuilder<TicketManagementDbContext>();
                 optionsBuilder.UseSqlServer(config.GetConnectionString("DefaultConnection"));
-                return new TicketManagementDbContext(optionsBuilder.Options);
+                return new TicketManagementDbContext(optionsBuilder.Options,currentUser);
 
         }
 

@@ -1,10 +1,17 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
+using Common.Exceptions;
 using Framework.Domain.Core;
+using Framework.Exception.Exceptions.Enum;
 
 namespace TicketManagement.Domain
 {
     public class Ticket:AggregateRoot<int>
     {
+        public Ticket()
+        {
+            
+        }
         public Ticket(string description, string title, string trackingCode)
         {
             
@@ -35,6 +42,15 @@ namespace TicketManagement.Domain
         public void AddAnswer(string answer)
         {
             _answerTickets.Add(new AnswerTicket(answer));
+        }
+        public void UpdateAnswer(string answer,int id)
+        {
+            var existAnswer=_answerTickets.FirstOrDefault(a => a.Id == id);
+            if (existAnswer is null)
+                throw new AppException(ResultCode.BadRequest, "can not find answer");
+            
+            existAnswer.Update(answer);
+
         }
     }
 }

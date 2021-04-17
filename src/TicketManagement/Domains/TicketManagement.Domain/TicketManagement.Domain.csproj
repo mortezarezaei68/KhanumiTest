@@ -6,6 +6,7 @@
 
     <ItemGroup>
       <ProjectReference Include="..\..\..\Frameworks\Framework.Domain\Framework.Domain.csproj" />
+      <ProjectReference Include="..\..\..\Frameworks\Framework.Exception\Framework.Exception.csproj" />
     </ItemGroup>
 
 </Project>

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using Framework.Context;
+using Framework.Domain.Core;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.ChangeTracking;
@@ -78,7 +79,7 @@ namespace UserManagement.Persistance.Context
                             || x.State == EntityState.Modified);
 
             // TODO: Get real current user id
-            var currentUserId = 1;
+            var currentUserId = "1";
 
             foreach (var entry in filtered)
             {

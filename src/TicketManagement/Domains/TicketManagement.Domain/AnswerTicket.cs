@@ -10,5 +10,10 @@ namespace TicketManagement.Domain
         }
 
         public string Answer { get;private set; }
+
+        public void Update(string answer)
+        {
+            Answer = answer;
+        }
     }
 }

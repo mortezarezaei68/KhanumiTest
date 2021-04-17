@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Service.Query.Model.AdminUserQuery;
 using ServiceContract.Command.AdminUserCommands;
+using ServiceContract.Command.UserTokenCommands;
 
 namespace UserManagement.Service.Controllers
 {
@@ -88,6 +89,12 @@ namespace UserManagement.Service.Controllers
         public async Task<ActionResult> GetCurrentAdminUser()
         {
             var data = await _eventBus.IssueQuery(new GetCurrentAdminUserQueryRequest());
+            return Ok(data);
+        }
+        [HttpPost("get-refresh-token")]
+        public async Task<ActionResult> GetRefreshToken(ExtendAccessTokenCommandRequest command)
+        {
+            var data=await _eventBus.Issue(command);
             return Ok(data);
         }
     }

@@ -16,6 +16,10 @@ namespace Framework.Domain.Core
 
             return Id.Equals(compareTo.Id);
         }
+        public void SetId(TKey id)
+        {
+            Id = id;
+        }
 
         public static bool operator ==(Entity<TKey> a, Entity<TKey> b)
         {

@@ -61,5 +61,6 @@ namespace UserManagement.Service.Controllers
             var data=await _eventBus.IssueQuery(new GetAllCustomerQueryRequest());
             return Ok(data);
         }
+ 
     }
 }
